@@ -1,6 +1,7 @@
 class linkedList {
-    constructor(){
-
+    constructor(head, size){
+        this.head = null;
+        this.size = 0;
     }
     append(value){
 
@@ -34,6 +35,7 @@ class linkedList {
     }
 }
 export{linkedList}
+
 class node {
     constructor(value, nextNode) {
         this.value = null;
