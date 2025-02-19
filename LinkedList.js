@@ -44,9 +44,28 @@ class linkedList {
         return this.tail;
     }
     at(index){
-
+        let current = this.head();
+        for(let i = 0; i < index; i++){
+            current = this.nextNode;
+        }
+        return current;
     }
     pop(){
+        if(this.size > 1){
+            let current = this.head();
+            for(let i = 0; i<size-1; i++){
+                current = this.nextNode;
+            }
+            current.nextNode = null;
+            this.size--;
+        }
+        else if(this.size == 1){
+            this.head = null;
+            this.tail = null;
+        }
+        else if(this.size == 0){
+            console.log('There are no more nodes.')
+        }
 
     }
     contains(){
