@@ -68,9 +68,17 @@ class linkedList {
         }
 
     }
-    contains(){
-
-    }
+    contains(value){
+        let current = this.head;
+        let isIn = false;
+            while(current != null){
+                if(current.value = value){
+                    isIn = true;
+                }
+                current = current.nextNode;
+            }
+        return isIn;
+        }
     find(value){
 
     }
