@@ -7,27 +7,31 @@ class linkedList {
     append(value){
         let node = new Node(element);
         let current;
-
-        if (this.tail == null)
+        node.value = value;
+        if (this.tail == null && this.head == null){
+            this.head = node;
             this.tail = node;
-        else{
-            current = this.tail;
         }
-        // move everything up one in index?
-        //increase size
+        else {
+            current = this.tail;
+            current.nextNode = node;
+            this.tail = node;
+        };
         this.size++;
     }
     prepend(value){
         let node = new Node(element);
         let current;
-
-        if (this.head == null)
+        node.value = value;
+        if (this.head == null){
             this.head = node;
+            this.tail = node;
+        }
         else{
             current = this.head;
+            this.head = node;
+            node.nextNode = current;
         }
-        // move everything down one in index?
-        //increase size
         this.size++;
     }
     size(){
