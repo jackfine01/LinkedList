@@ -5,7 +5,7 @@ class linkedList {
         this.size = 0;
     }
     append(value){
-        let node = new Node(element);
+        let node = new Node();
         let current;
         node.value = value;
         if (this.tail == null && this.head == null){
@@ -80,10 +80,23 @@ class linkedList {
         return isIn;
         }
     find(value){
-
+        let current = this.head;
+        let index = 0;
+            while(current.value != value && current.value != null){
+                index++;
+                current = current.nextNode;
+            }
+            console.log("Index of " + value + ": " + index)
+            return index;
     }
     toString(){
-        
+        let current = this.head;
+        let string = "";
+
+        while (current) {
+            string += current.value + (current.nextNode ? " ->  " : "")
+            current = current.next;
+        }
     }
 }
 export{linkedList}
@@ -92,6 +105,12 @@ class Node {
     constructor(value, nextNode) {
         this.value = null;
         this.nextNode = null;
+    }
+    value(){
+        return this.value;
+    }
+    nextNode(){
+        return this.nextNode;
     }
 }
 export{Node}
