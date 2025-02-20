@@ -73,6 +73,7 @@ class linkedList {
         let isIn = false;
             while(current != null){
                 if(current.value == value){
+                    console.log(current.value)
                     isIn = true;
                 }
                 current = current.nextNode;
