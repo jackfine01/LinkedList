@@ -18,3 +18,5 @@ console.log(list)
 console.log(list.toString());
 
 console.log(list.at(3))
+console.log(list.contains('dog'))
+console.log(list.contains('asda'))
