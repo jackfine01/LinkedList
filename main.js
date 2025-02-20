@@ -15,8 +15,8 @@ console.log(list)
 list.append("turtle");
 console.log(list)
 
-console.log(list.toString());
+console.log("the list: " + list.toString());
 
-console.log(list.at(3))
-console.log(list.contains('dog'))
-console.log(list.contains('asda'))
+console.log("the list at index[3]: " + list.at(3))
+console.log("the list contains dog: " + list.contains('dog'))
+console.log("the list contains zebra: " + list.contains('zebra'))
