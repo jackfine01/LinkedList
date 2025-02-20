@@ -44,11 +44,11 @@ class linkedList {
         return this.tail;
     }
     at(index){
-        let current = this.head();
+        let current = this.head;
         for(let i = 0; i < index; i++){
-            current = this.nextNode;
+            current = current.nextNode;
         }
-        return current;
+        return current.value;
     }
     pop(){
         if(this.size > 1){
@@ -95,8 +95,9 @@ class linkedList {
 
         while (current) {
             string += current.value + (current.nextNode ? " ->  " : "")
-            current = current.next;
+            current = current.nextNode;
         }
+        return string;
     }
 }
 export{linkedList}
